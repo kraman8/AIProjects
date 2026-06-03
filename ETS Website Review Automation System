@@ -1,0 +1,36 @@
+
+# ETS Website Review Automation System
+
+## Overview
+This system automates the conversion of website URLs from an Excel file into structured Planner tasks, based on defined business rules.
+
+---
+
+## Problem
+Manual creation of review tasks is inefficient, inconsistent, and not scalable.
+
+---
+
+## Solution
+- Read URLs from Excel in SharePoint
+- Apply condition-based filtering
+- Create Planner tasks only when required
+- Provide a scalable workflow for future AI integration
+
+---
+
+## Data Contract
+
+| Field | Type | Description |
+|------|------|------------|
+| URL | String | Website page link |
+| Upload in Planner | String/Boolean | Controls task creation |
+
+---
+
+## Business Rule
+
+```text
+IF Upload in Planner = "Yes"
+THEN create Planner task
+ELSE skip
